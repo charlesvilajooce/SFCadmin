@@ -1,0 +1,46 @@
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+<table class="table table-striped	">
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Surname</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Birthday</th>
+      <th>Injured</th>
+      <th>Suspended</th>
+      <th>Role</th>
+      <th>Playtime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr class='clickable-row' data-href="<%=user_path(user)%>">
+        <td><%= user.level %></td>
+        <td><%= user.surname %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.birthday %></td>
+        <td><%= user.injured %></td>
+        <td><%= user.suspended %></td>
+        <td><%= user.role %></td>
+        <td><%= user.playtime %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

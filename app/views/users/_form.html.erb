@@ -1,0 +1,122 @@
+<%= form_for(user) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :level %>
+    <%= f.number_field :level %>
+  </div>
+
+  <div class="field">
+    <%= f.label :surname %>
+    <%= f.text_field :surname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthday %>
+    <%= f.date_select :birthday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :parents %>
+    <%= f.text_area :parents %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photo_url %>
+    <%= f.text_field :photo_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :injured %>
+    <%= f.check_box :injured %>
+  </div>
+
+  <div class="field">
+    <%= f.label :injury_archive %>
+    <%= f.text_area :injury_archive %>
+  </div>
+
+  <div class="field">
+    <%= f.label :suspended %>
+    <%= f.check_box :suspended %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cards_archive %>
+    <%= f.text_area :cards_archive %>
+  </div>
+
+  <div class="field">
+    <%= f.label :role %>
+    <%= f.number_field :role %>
+  </div>
+
+  <div class="field">
+    <%= f.label :school %>
+    <%= f.text_field :school %>
+  </div>
+
+  <div class="field">
+    <%= f.label :school_archive %>
+    <%= f.text_area :school_archive %>
+  </div>
+
+  <div class="field">
+    <%= f.label :physic_char %>
+    <%= f.text_area :physic_char %>
+  </div>
+
+  <div class="field">
+    <%= f.label :playtime %>
+    <%= f.number_field :playtime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :arriving_date %>
+    <%= f.date_select :arriving_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :endcontrat_date %>
+    <%= f.date_select :endcontrat_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sportactivity_archive %>
+    <%= f.text_area :sportactivity_archive %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
