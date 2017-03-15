@@ -11,112 +11,112 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :level %>
-    <%= f.number_field :level %>
+    <%= f.number_field :level, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :surname %>
-    <%= f.text_field :surname %>
+    <%= f.text_field :surname, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :birthday %>
-    <%= f.date_select :birthday %>
+    <%= f.date_select :birthday, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :parents %>
-    <%= f.text_area :parents %>
+    <%= f.text_area :parents, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :photo_url %>
-    <%= f.text_field :photo_url %>
+    <%= f.text_field :photo_url, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :injured %>
-    <%= f.check_box :injured %>
+    <%= f.check_box :injured, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :injury_archive %>
-    <%= f.text_area :injury_archive %>
+    <%= f.text_area :injury_archive, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :suspended %>
-    <%= f.check_box :suspended %>
+    <%= f.check_box :suspended, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :cards_archive %>
-    <%= f.text_area :cards_archive %>
+    <%= f.text_area :cards_archive, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :role %>
-    <%= f.number_field :role %>
+    <%= f.number_field :role, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :school %>
-    <%= f.text_field :school %>
+    <%= f.text_field :school, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :school_archive %>
-    <%= f.text_area :school_archive %>
+    <%= f.text_area :school_archive, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :physic_char %>
-    <%= f.text_area :physic_char %>
+    <%= f.text_area :physic_char, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :playtime %>
-    <%= f.number_field :playtime %>
+    <%= f.number_field :playtime, class:'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :arriving_date %>
-    <%= f.date_select :arriving_date %>
+    <%= f.date_select :arriving_date, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :endcontrat_date %>
-    <%= f.date_select :endcontrat_date %>
+    <%= f.date_select :endcontrat_date, class:'form-control'  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :sportactivity_archive %>
-    <%= f.text_area :sportactivity_archive %>
+    <%= f.text_area :sportactivity_archive, class:'form-control'  %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Enregistrer', class:'btn' %>
   </div>
 <% end %>
