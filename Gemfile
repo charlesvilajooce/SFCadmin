@@ -58,3 +58,6 @@ gem 'rails-assets-tether', '>= 1.1.0'
 
 # Generate seed file from existing data in the database
 gem 'seed_dump'
+
+# File upload
+gem 'paperclip'

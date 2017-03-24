@@ -14,4 +14,5 @@
 //= require tether
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.dataTables.min.js
 //= require_tree .
