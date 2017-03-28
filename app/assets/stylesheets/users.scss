@@ -1,3 +1,42 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.paginate_button{
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: #292b2c;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.disabled:focus, .disabled:hover a{
+  color: grey !important;
+}
+
+.dataTable {
+  margin-top: 15px;
+}
+
+.dataTables_info{
+  width: 500px;
+}
+
+.dataTables_length{
+  width: 250px;
+}
