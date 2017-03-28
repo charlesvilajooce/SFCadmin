@@ -21,12 +21,18 @@
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   color: #292b2c;
-  background-color: #fff;
+  background-color: #b7b7b7;
   border-color: #ccc;
 }
 
-.disabled:focus, .disabled:hover a{
+.active a{
+  color: #85142b !important;
+  cursor: not-allowed;
+}
+
+.disabled a{
   color: grey !important;
+  cursor:not-allowed;
 }
 
 .dataTable {
@@ -39,4 +45,8 @@
 
 .dataTables_length{
   width: 250px;
+}
+
+.btn-user{
+  padding: 0.1rem 0.2rem !important;
 }

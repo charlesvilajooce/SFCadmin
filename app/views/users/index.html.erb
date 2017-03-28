@@ -8,7 +8,6 @@
 <table id="userindex" class="table table-striped	">
   <thead>
     <tr>
-      <th>Level</th>
       <th>Surname</th>
       <th>Name</th>
       <th>Email</th>
@@ -24,16 +23,19 @@
   <tbody>
     <% @users.each do |user| %>
       <tr class='clickable-row' data-href="<%=user_path(user)%>">
-        <td><%= user.level %></td>
-        <td><%= user.surname %></td>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.birthday %></td>
+        <td style="overflow: hidden; white-space: nowrap;"><%= user.surname %></td>
+        <td style="overflow: hidden; white-space: nowrap;"><%= user.name %></td>
+        <td style="overflow: hidden; white-space: nowrap;"><%= user.email %></td>
+        <td style="overflow: hidden; white-space: nowrap;"><%= user.birthday %></td>
         <td><%= user.injured %></td>
         <td><%= user.suspended %></td>
         <td><%= user.role %></td>
         <td><%= user.playtime %></td>
-        <td><%= link_to 'Show', user %><%= link_to 'Edit', edit_user_path(user) %><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style="overflow: hidden; white-space: nowrap;">
+          <%= link_to '<i class="fa fa-search" aria-hidden="true"></i>'.html_safe, user , class: 'btn btn-success btn-user'%>
+          <%= link_to '<i class="fa fa-pencil" aria-hidden="true"></i>'.html_safe, edit_user_path(user), class: 'btn btn-warning btn-user' %>
+          <%= link_to '<i class="fa fa-times" aria-hidden="true"></i>'.html_safe, user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-user' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -41,4 +43,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, class: 'btn btn-primary' %>

@@ -14,8 +14,13 @@ p, ol, ul, td {
   border-color: #85142b !important;
 }
 
+a {
+  color: white !important;
+  text-decoration: none;
+}
+
 a:focus, a:hover {
-  color: #85142b !important;
+  color: white !important;
   text-decoration: none !important;
 }
 

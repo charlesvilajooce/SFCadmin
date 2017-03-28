@@ -64,3 +64,6 @@ gem 'paperclip'
 
 # Table ordering and filter
 gem 'jquery-datatables-rails'
+
+#font-awesome
+gem "font-awesome-rails"
