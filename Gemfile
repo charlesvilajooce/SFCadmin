@@ -61,3 +61,6 @@ gem 'seed_dump'
 
 # File upload
 gem 'paperclip'
+
+# Table ordering and filter
+gem 'jquery-datatables-rails'
