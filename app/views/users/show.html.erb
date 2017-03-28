@@ -8,9 +8,11 @@
   <div class="col-4">
     <div class="col-12">
       <div class="thumbnail">
-        <%= image_tag(@user.photo_url, size: "300") %>
+        <% if @user.avatar.thumb.url!=nil %>
+            <%= image_tag @user.avatar.url %>
+        <% end %>
         <div class="caption">
-          <h3><%= @user.surname %><%= @user.name %> <small>(<%= @user.level %>)</small></h3>
+          <h3><%= @user.surname %> <%= @user.name %> <small>(<%= @user.level %>)</small></h3>
           <p><strong>Role:</strong><%= @user.role %></p>
           <p>
             <strong>Email:</strong>

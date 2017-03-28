@@ -21303,3 +21303,656 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.6ms)
 
 
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT GET_LOCK('17301911176224780', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddAvatarToDb (20170328181038)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('17301911176224780')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('17301911176224780', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddAvatarToUsers (20170328181502)
+  [1m[35m (69.2ms)[0m  [1m[35mALTER TABLE `users` ADD `avatar` varchar(255)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170328181502')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('17301911176224780')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('17301911176224780', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('17301911176224780')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('17301911176224780', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('17301911176224780')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/users" for 127.0.0.1 at 2017-03-28 20:16:02 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`name` ASC[0m
+  Rendered users/index.html.erb within layouts/application (30.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 430ms (Views: 407.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:16:04 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+     9:     <div class="col-12">
+    10:       <div class="thumbnail">
+    11:         <%= image_tag(@user.photo_url, size: "300") %>
+    12:         <%= image_tag @user.avatar.thumb.url %>
+    13:         <div class="caption">
+    14:           <h3><%= @user.surname %><%= @user.name %> <small>(<%= @user.level %>)</small></h3>
+    15:           <p><strong>Role:</strong><%= @user.role %></p>
+  
+app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb___2748316368233086551_70356053347860'
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.1ms)
+Started GET "/users/6" for 127.0.0.1 at 2017-03-28 20:16:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+     9:     <div class="col-12">
+    10:       <div class="thumbnail">
+    11:         <%= image_tag(@user.photo_url, size: "300") %>
+    12:         <%= image_tag @user.avatar.thumb.url %>
+    13:         <div class="caption">
+    14:           <h3><%= @user.surname %><%= @user.name %> <small>(<%= @user.level %>)</small></h3>
+    15:           <p><strong>Role:</strong><%= @user.role %></p>
+  
+app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb___2748316368233086551_70356051220000'
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.4ms)
+Started GET "/users/6" for 127.0.0.1 at 2017-03-28 20:17:01 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 54.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2017-03-28 20:17:12 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-03-28 20:17:16 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`name` ASC[0m
+  Rendered users/index.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 56.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:17:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-03-28 20:17:20 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (39.1ms)
+  Rendered users/edit.html.erb within layouts/application (41.4ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 100.0ms | ActiveRecord: 4.9ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-03-28 20:17:27 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"93gBm/Wr2VgidGIQruxXZtqxJTcxBUEJkSDjNE1tTQTq9SowbKDwKJrj1tkpzaALpdUq6aHjDPwqvTLUeG5mMA==", "user"=>{"level"=>"2", "surname"=>"Anthony", "name"=>"Sauthier", "email"=>"anthony.sauthier@sfc.ch", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"2017", "birthday(2i)"=>"3", "birthday(3i)"=>"28", "parents"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ffa16f35698 @tempfile=#<Tempfile:/var/folders/6t/v1t_qjvd7ql5d3dqp8_2863m0000gn/T/RackMultipart20170328-5087-47vwti.jpg>, @original_filename="201617-sauthier.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"201617-sauthier.jpg\"\r\nContent-Type: image/jpeg\r\n">, "injured"=>"0", "injury_archive"=>"", "suspended"=>"0", "cards_archive"=>"", "role"=>"", "school"=>"", "school_archive"=>"", "physic_char"=>"", "playtime"=>"", "arriving_date(1i)"=>"2017", "arriving_date(2i)"=>"3", "arriving_date(3i)"=>"28", "endcontrat_date(1i)"=>"2017", "endcontrat_date(2i)"=>"3", "endcontrat_date(3i)"=>"28", "sportactivity_archive"=>""}, "commit"=>"Enregistrer", "id"=>"7"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Unpermitted parameter: image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 11ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:17:27 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 63.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:17:37 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:18:02 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+     9:     <div class="col-12">
+    10:       <div class="thumbnail">
+    11:         <%= image_tag(@user.photo_url, size: "300") %>
+    12:             <%= image_tag @user.avatar.thumb.url %>
+    13:         <div class="caption">
+    14:           <h3><%= @user.surname %><%= @user.name %> <small>(<%= @user.level %>)</small></h3>
+    15:           <p><strong>Role:</strong><%= @user.role %></p>
+  
+app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb___2748316368233086551_70356030274460'
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.2ms)
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:18:31 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:20:10 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 432ms (Views: 384.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-03-28 20:20:11 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (59.4ms)
+  Rendered users/edit.html.erb within layouts/application (62.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 163ms (Views: 159.8ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-03-28 20:20:19 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NgOJvkjbceBGdLq5iUhmh0H3fT+sAAMLqjEyLN2HYecrjqIV0dBYkP7jDnAOaZHqPpNy4TzmTv4RrOPM6IRK0w==", "user"=>{"level"=>"2", "surname"=>"Anthony", "name"=>"Sauthier", "email"=>"anthony.sauthier@sfc.ch", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"2017", "birthday(2i)"=>"3", "birthday(3i)"=>"28", "parents"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fd01bc7c7f0 @tempfile=#<Tempfile:/var/folders/6t/v1t_qjvd7ql5d3dqp8_2863m0000gn/T/RackMultipart20170328-5143-1u1edx6.jpg>, @original_filename="201617-sauthier.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"201617-sauthier.jpg\"\r\nContent-Type: image/jpeg\r\n">, "injured"=>"0", "injury_archive"=>"", "suspended"=>"0", "cards_archive"=>"", "role"=>"", "school"=>"", "school_archive"=>"", "physic_char"=>"", "playtime"=>"", "arriving_date(1i)"=>"2017", "arriving_date(2i)"=>"3", "arriving_date(3i)"=>"28", "endcontrat_date(1i)"=>"2017", "endcontrat_date(2i)"=>"3", "endcontrat_date(3i)"=>"28", "sportactivity_archive"=>""}, "commit"=>"Enregistrer", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Unpermitted parameter: avatar
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 10ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:20:19 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 61.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-03-28 20:24:35 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (12.8ms)
+  Rendered users/edit.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3158ms (Views: 3123.8ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-03-28 20:24:46 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zpSqgEDtlcYWo/lknsVYq3IbNrPzlQLo9aQ/K/909c7TGYEr2ea8tq40Ta0Z5K/GDX85bWNzTx1OOe7Lynfe+g==", "user"=>{"level"=>"2", "surname"=>"Anthony", "name"=>"Sauthier", "email"=>"anthony.sauthier@sfc.ch", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"2017", "birthday(2i)"=>"3", "birthday(3i)"=>"28", "parents"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fd01e489e50 @tempfile=#<Tempfile:/var/folders/6t/v1t_qjvd7ql5d3dqp8_2863m0000gn/T/RackMultipart20170328-5143-1pixol4.jpg>, @original_filename="201617-sauthier.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"201617-sauthier.jpg\"\r\nContent-Type: image/jpeg\r\n">, "injured"=>"0", "injury_archive"=>"", "suspended"=>"0", "cards_archive"=>"", "role"=>"", "school"=>"", "school_archive"=>"", "physic_char"=>"", "playtime"=>"", "arriving_date(1i)"=>"2017", "arriving_date(2i)"=>"3", "arriving_date(3i)"=>"28", "endcontrat_date(1i)"=>"2017", "endcontrat_date(2i)"=>"3", "endcontrat_date(3i)"=>"28", "sportactivity_archive"=>""}, "commit"=>"Enregistrer", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Unpermitted parameter: avatar
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:24:46 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 119ms (Views: 112.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-03-28 20:26:50 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OAilpUKrydWO04Btkp9xZuwQSOldXQwR6sMOTjWaMjclhY4O26DgpTZENKQVvoYLk3RHN827QeRRXt+uAJkZAw=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-03-28 20:26:50 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-03-28 20:26:55 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HN5s3Id6lA71YY0VrFikuHShdK2+fLWyTF3QHxcZs7MBU0d3HnG9fk32OdwreVPVC8V7cy6a+Ef3wAH/IhqYhw==", "name"=>"Moret", "surname"=>"Bernard", "password"=>"[FILTERED]", "button"=>""}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`name` = 'Moret' AND `users`.`surname` = 'Bernard' LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 102ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-28 20:26:55 +0200
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 57.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-03-28 20:26:57 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`name` ASC[0m
+  Rendered users/index.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 65.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:26:58 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 67.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-03-28 20:26:59 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (17.1ms)
+  Rendered users/edit.html.erb within layouts/application (20.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 96ms (Views: 90.7ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-03-28 20:27:05 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7tDKLTS8I2rNC4/U0J69stoQO1vtl/+2JEwiMK0LvhrzXeGGrbcKGnWcOx1Xv0rfpXQ0hX1xskOf0fPQmAiVLg==", "user"=>{"level"=>"2", "surname"=>"Anthony", "name"=>"Sauthier", "email"=>"anthony.sauthier@sfc.ch", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"2017", "birthday(2i)"=>"3", "birthday(3i)"=>"28", "parents"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fd01b8793b0 @tempfile=#<Tempfile:/var/folders/6t/v1t_qjvd7ql5d3dqp8_2863m0000gn/T/RackMultipart20170328-5143-csyooy.jpg>, @original_filename="201617-sauthier.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"201617-sauthier.jpg\"\r\nContent-Type: image/jpeg\r\n">, "injured"=>"0", "injury_archive"=>"", "suspended"=>"0", "cards_archive"=>"", "role"=>"", "school"=>"", "school_archive"=>"", "physic_char"=>"", "playtime"=>"", "arriving_date(1i)"=>"2017", "arriving_date(2i)"=>"3", "arriving_date(3i)"=>"28", "endcontrat_date(1i)"=>"2017", "endcontrat_date(2i)"=>"3", "endcontrat_date(3i)"=>"28", "sportactivity_archive"=>""}, "commit"=>"Enregistrer", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Unpermitted parameter: avatar
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:27:05 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 69.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-03-28 20:32:00 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (13.3ms)
+  Rendered users/edit.html.erb within layouts/application (15.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 77.2ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-03-28 20:32:08 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jx32VKDi+it6To3zDekyHxmeJ2Wc/x7hdVZ9Oad+RRY6kN3/OenTW8LZOTqKyMVyZvoouwwZUxTOy6zZkn1uIg==", "user"=>{"level"=>"2", "surname"=>"Anthony", "name"=>"Sauthier", "email"=>"anthony.sauthier@sfc.ch", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"2017", "birthday(2i)"=>"3", "birthday(3i)"=>"28", "parents"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fd01dc56b48 @tempfile=#<Tempfile:/var/folders/6t/v1t_qjvd7ql5d3dqp8_2863m0000gn/T/RackMultipart20170328-5143-zvnkun.jpg>, @original_filename="201617-sauthier.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"201617-sauthier.jpg\"\r\nContent-Type: image/jpeg\r\n">, "injured"=>"0", "injury_archive"=>"", "suspended"=>"0", "cards_archive"=>"", "role"=>"", "school"=>"", "school_archive"=>"", "physic_char"=>"", "playtime"=>"", "arriving_date(1i)"=>"2017", "arriving_date(2i)"=>"3", "arriving_date(3i)"=>"28", "endcontrat_date(1i)"=>"2017", "endcontrat_date(2i)"=>"3", "endcontrat_date(3i)"=>"28", "sportactivity_archive"=>""}, "commit"=>"Enregistrer", "id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE `users` SET `avatar` = '201617-sauthier.jpg', `updated_at` = '2017-03-28 18:32:08' WHERE `users`.`id` = 7[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 114ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:32:08 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-03-28 20:35:24 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (48.7ms)
+  Rendered users/edit.html.erb within layouts/application (51.0ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image?' for #<User:0x007fd01dfa4de0>):
+    54:   <div class="form-group">
+    55:     <%= f.label :avatar %><br>
+    56:     <%= f.file_field :avatar, class:'form-control' %>
+    57:     <% if f.object.image? %>
+    58:         <%= image_tag f.object.image.thumb.url %>
+    59:         <%= f.label :remove_image %>
+    60:         <%= f.check_box :remove_image %>
+  
+app/views/users/_form.html.erb:57:in `block in _app_views_users__form_html_erb___1318254089103112518_70265923006200'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___1318254089103112518_70265923006200'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__2834315485436591803_70265919462520'
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.8ms)
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-03-28 20:35:50 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (13.6ms)
+  Rendered users/edit.html.erb within layouts/application (15.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 71.1ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-03-28 20:35:53 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HG4QTAHNkzeYdtYKmyIHXy0IrSXLEmTRLp7AortmM0wB4zvnmMa6RyDhYsMcA/AyUmyi+1v0KSSVAxFCjmUYeA==", "user"=>{"level"=>"2", "surname"=>"Anthony", "name"=>"Sauthier", "email"=>"anthony.sauthier@sfc.ch", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"2017", "birthday(2i)"=>"3", "birthday(3i)"=>"28", "parents"=>"", "remove_avatar"=>"1", "injured"=>"0", "injury_archive"=>"", "suspended"=>"0", "cards_archive"=>"", "role"=>"", "school"=>"", "school_archive"=>"", "physic_char"=>"", "playtime"=>"", "arriving_date(1i)"=>"2017", "arriving_date(2i)"=>"3", "arriving_date(3i)"=>"28", "endcontrat_date(1i)"=>"2017", "endcontrat_date(2i)"=>"3", "endcontrat_date(3i)"=>"28", "sportactivity_archive"=>""}, "commit"=>"Enregistrer", "id"=>"7"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Unpermitted parameter: remove_avatar
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 10ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:35:53 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-03-28 20:35:56 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (15.8ms)
+  Rendered users/edit.html.erb within layouts/application (18.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 77.2ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-03-28 20:36:03 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z8D9Ws/yTJoJ9cghOpx46GZmo/HgR70mlhxCW6OrA5vSTdbxVvll6rFifOi9vY+FGQKsL3Ch8NMtgZO7lqgorw==", "user"=>{"level"=>"2", "surname"=>"Anthony", "name"=>"Sauthier", "email"=>"anthony.sauthier@sfc.ch", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"2017", "birthday(2i)"=>"3", "birthday(3i)"=>"28", "parents"=>"", "remove_avatar"=>"1", "injured"=>"0", "injury_archive"=>"", "suspended"=>"0", "cards_archive"=>"", "role"=>"", "school"=>"", "school_archive"=>"", "physic_char"=>"", "playtime"=>"", "arriving_date(1i)"=>"2017", "arriving_date(2i)"=>"3", "arriving_date(3i)"=>"28", "endcontrat_date(1i)"=>"2017", "endcontrat_date(2i)"=>"3", "endcontrat_date(3i)"=>"28", "sportactivity_archive"=>""}, "commit"=>"Enregistrer", "id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+Unpermitted parameter: remove_avatar
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:36:03 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 66.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-03-28 20:37:10 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (13.7ms)
+  Rendered users/edit.html.erb within layouts/application (15.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 77.4ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-03-28 20:37:13 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jSYNanK0RXSm/u3s1PP+/FUrvdJqsXxmOb1g+8wBMpWQqybB679sBB5pWSVT0gmRKk+yDPpXMZOCILEb+QIZoQ==", "user"=>{"level"=>"2", "surname"=>"Anthony", "name"=>"Sauthier", "email"=>"anthony.sauthier@sfc.ch", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"2017", "birthday(2i)"=>"3", "birthday(3i)"=>"28", "parents"=>"", "remove_avatar"=>"1", "injured"=>"0", "injury_archive"=>"", "suspended"=>"0", "cards_archive"=>"", "role"=>"", "school"=>"", "school_archive"=>"", "physic_char"=>"", "playtime"=>"", "arriving_date(1i)"=>"2017", "arriving_date(2i)"=>"3", "arriving_date(3i)"=>"28", "endcontrat_date(1i)"=>"2017", "endcontrat_date(2i)"=>"3", "endcontrat_date(3i)"=>"28", "sportactivity_archive"=>""}, "commit"=>"Enregistrer", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `avatar` = NULL, `updated_at` = '2017-03-28 18:37:13' WHERE `users`.`id` = 7[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 16ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:37:13 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+     8:   <div class="col-4">
+     9:     <div class="col-12">
+    10:       <div class="thumbnail">
+    11:         <%= image_tag @user.avatar.thumb.url %>
+    12:         <div class="caption">
+    13:           <h3><%= @user.surname %><%= @user.name %> <small>(<%= @user.level %>)</small></h3>
+    14:           <p><strong>Role:</strong><%= @user.role %></p>
+  
+app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___1091158140354116709_70265915784600'
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/bernardmoret/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.3ms)
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:37:58 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 37.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:43:49 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 48.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-03-28 20:43:50 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (17.2ms)
+  Rendered users/edit.html.erb within layouts/application (19.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 83.8ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-03-28 20:43:57 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lWkBQLv4j00/ZagX1mA06LA2Cp5qp56yzN3Oq+pghguI5CrrIvOmPYfyHN5RQcOFz1IFQPpB00d3QB9L32OtPw==", "user"=>{"level"=>"2", "surname"=>"Anthony", "name"=>"Sauthier", "email"=>"anthony.sauthier@sfc.ch", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"2017", "birthday(2i)"=>"3", "birthday(3i)"=>"28", "parents"=>"", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fd0175d5568 @tempfile=#<Tempfile:/var/folders/6t/v1t_qjvd7ql5d3dqp8_2863m0000gn/T/RackMultipart20170328-5143-zyv0gc.jpg>, @original_filename="201617-sauthier.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"201617-sauthier.jpg\"\r\nContent-Type: image/jpeg\r\n">, "injured"=>"0", "injury_archive"=>"", "suspended"=>"0", "cards_archive"=>"", "role"=>"", "school"=>"", "school_archive"=>"", "physic_char"=>"", "playtime"=>"", "arriving_date(1i)"=>"2017", "arriving_date(2i)"=>"3", "arriving_date(3i)"=>"28", "endcontrat_date(1i)"=>"2017", "endcontrat_date(2i)"=>"3", "endcontrat_date(3i)"=>"28", "sportactivity_archive"=>""}, "commit"=>"Enregistrer", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `avatar` = '201617-sauthier.jpg', `updated_at` = '2017-03-28 18:43:57' WHERE `users`.`id` = 7[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 75ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:43:57 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 79.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-03-28 20:46:10 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 101ms (Views: 98.3ms | ActiveRecord: 0.7ms)
+
+
