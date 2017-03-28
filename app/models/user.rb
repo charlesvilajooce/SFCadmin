@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   attr_accessor :remember_token, :activation_token, :reset_token
 
+  mount_uploader :avatar, AvatarUploader
+
   # Sets the password reset attributes.
   def create_reset_digest
     self.reset_token = User.new_token

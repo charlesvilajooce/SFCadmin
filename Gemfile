@@ -60,7 +60,8 @@ gem 'rails-assets-tether', '>= 1.1.0'
 gem 'seed_dump'
 
 # File upload
-gem 'paperclip'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Table ordering and filter
 gem 'jquery-datatables-rails'
