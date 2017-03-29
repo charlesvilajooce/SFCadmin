@@ -19,9 +19,19 @@ a {
   text-decoration: none;
 }
 
+.dropdown-item{
+  color: black !important;
+}
+
 a:focus, a:hover {
   color: white !important;
   text-decoration: none !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: grey !important;
+  text-decoration: none;
+  background-color: #f7f7f9;
 }
 
 //Sign in page
