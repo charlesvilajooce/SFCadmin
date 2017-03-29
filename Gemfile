@@ -54,6 +54,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap'
 
+
 gem 'tether-rails'
 gem 'rails-assets-tether', '>= 1.1.0'
 
